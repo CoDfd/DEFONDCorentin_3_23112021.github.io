@@ -1,0 +1,156 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Shrikhand', cursive;
+}
+
+header {
+  width: 100%;
+  max-width: 768px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  -webkit-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.16);
+}
+
+header .retour {
+  height: 100%;
+  width: 15%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .retour i {
+  vertical-align: middle;
+  font-size: 190%;
+}
+
+header .logo {
+  width: 80%;
+  height: auto;
+  padding: 20px 0px 10px 0px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+header .logo__img {
+  height: auto;
+  width: auto;
+  margin: auto;
+  display: inline-block;
+}
+
+header .logo img {
+  width: 80%;
+  height: 80%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+main {
+  width: 100%;
+  max-width: 768px;
+}
+
+.localisation {
+  height: auto;
+  width: 100%;
+  background-color: #d9f4ed;
+  font-size: 150%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.localisation__area {
+  height: auto;
+  width: 200px;
+  color: #404040;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.resa {
+  height: 450px;
+  width: 100%;
+  background-color: #ecfaf6;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.resa__title {
+  width: 60%;
+  font-size: 220%;
+  font-weight: 550;
+}
+
+.resa__body {
+  width: 80%;
+  font-size: 180%;
+  font-weight: 350;
+  color: gray;
+}
+
+.resa__button {
+  width: 325px;
+  background-color: #b389e7;
+  color: white;
+  font-size: 150%;
+  border-top-left-radius: 12% 50%;
+  border-bottom-left-radius: 12% 50%;
+  border-top-right-radius: 12% 50%;
+  border-bottom-right-radius: 12% 50%;
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2), inset 2px 10px 20px rgba(255, 255, 255, 0.5), inset -2px -3px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2), inset 2px 10px 20px rgba(255, 255, 255, 0.5), inset -2px -3px 20px rgba(0, 0, 0, 0.2);
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+}
+/*# sourceMappingURL=main.css.map */
