@@ -510,4 +510,33 @@ main {
 p {
   font-family: 'Roboto', sans-serif;
 }
+
+main {
+  width: 100%;
+  max-width: 768px;
+  height: 1800px;
+  margin: auto;
+  padding: auto;
+}
+
+.menu-img {
+  width: 100%;
+  height: 15%;
+  overflow: hidden;
+}
+
+.menu-img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.menu-container {
+  width: 100%;
+  height: 85%;
+  background-color: #f6f6f6;
+  border-radius: 50px 50px 0% 0%;
+  margin-top: -50px;
+  overflow: visible;
+}
 /*# sourceMappingURL=main.css.map */
