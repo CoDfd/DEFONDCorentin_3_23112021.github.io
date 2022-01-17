@@ -20,6 +20,62 @@ h1, h2, h3, h4, h5, h6 {
   color: black;
 }
 
+.step {
+  height: auto;
+  width: 90%;
+  background-color: #f6f6f6;
+  border-radius: 30px;
+  padding: 40px 0px 40px 0px;
+  margin-left: 5%;
+  text-align: center;
+  position: relative;
+  -webkit-box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.1), inset 2px 10px 20px rgba(255, 255, 255, 0.5);
+          box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.1), inset 2px 10px 20px rgba(255, 255, 255, 0.5);
+}
+
+.step__number {
+  position: absolute;
+  top: 40px;
+  left: -15px;
+  background-color: #9356DC;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  color: white;
+  font-size: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.step__icon {
+  position: absolute;
+  top: 40px;
+  left: 10%;
+}
+
+.step__icon i {
+  font-size: 120%;
+  color: #7E7E7E;
+  vertical-align: middle;
+}
+
+.step:hover {
+  background-color: #F5EDFF;
+  -webkit-box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.15), inset 2px 10px 20px rgba(255, 255, 255, 0.5);
+          box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.15), inset 2px 10px 20px rgba(255, 255, 255, 0.5);
+}
+
+.step:hover i {
+  color: #9356DC;
+}
+
 header {
   width: 100%;
   max-width: 768px;
@@ -55,6 +111,11 @@ header .retour {
 header .retour i {
   vertical-align: middle;
   font-size: 190%;
+}
+
+header .retour a {
+  text-decoration: none;
+  color: black;
 }
 
 header .logo {
@@ -94,7 +155,7 @@ main {
 .localisation {
   height: auto;
   width: 100%;
-  background-color: #d9f4ed;
+  background-color: #EAEAEA;
   font-size: 150%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -125,7 +186,7 @@ main {
   min-height: -moz-fit-content;
   min-height: fit-content;
   width: 100%;
-  background-color: #ecfaf6;
+  background-color: #f6f6f6;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -188,7 +249,7 @@ main {
 }
 
 .fonctionnement {
-  height: 550px;
+  height: 650px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -207,6 +268,7 @@ main {
 
 .fonctionnement__title {
   width: 90%;
+  padding-top: 40px;
 }
 
 .fonctionnement__title h1 {
@@ -215,8 +277,26 @@ main {
   font-weight: 550;
 }
 
+.fonctionnement__boxstep {
+  height: 450px;
+  width: 95%;
+  font-size: 150%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .resto {
-  height: 550px;
+  height: 1500px;
   width: 100%;
   background-color: #ecfaf6;
   display: -webkit-box;
@@ -236,6 +316,7 @@ main {
 
 .resto__title {
   width: 90%;
+  padding-top: 40px;
 }
 
 .resto__title h1 {
