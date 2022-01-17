@@ -62,7 +62,21 @@
         background-color: #F5EDFF;
         box-shadow: 0px 10px 12px rgba(0,0,0,0.15),
         inset 2px 10px 20px rgba(255,255,255,0.5); 
+        transform: scale(1.02);
 
+        & i
+        {
+            color: $color-primary;
+        }
+    }
+
+    &:active
+    {
+        background-color: #F5EDFF;
+        box-shadow: 0px 10px 12px rgba(0,0,0,0.15),
+        inset 2px 10px 20px rgba(255,255,255,0.5); 
+        transform: scale(1.04);
+    
         & i
         {
             color: $color-primary;
