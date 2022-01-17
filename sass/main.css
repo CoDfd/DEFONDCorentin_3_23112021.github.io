@@ -224,10 +224,59 @@ header .logo img {
      object-fit: contain;
 }
 
+footer {
+  width: 100%;
+  max-width: 768px;
+  height: 320px;
+  margin: auto;
+  margin-top: -30px;
+  background-color: #3A3A3A;
+  color: whitesmoke;
+}
+
+footer h2 {
+  font-weight: 100;
+  font-size: 180%;
+  letter-spacing: 1px;
+  padding: 30px 0px 0px 30px;
+}
+
+footer .footer {
+  width: 90%;
+  font-size: 150%;
+  line-height: 180%;
+  padding: 0px 0px 0px 30px;
+}
+
+footer .footer__item {
+  position: relative;
+}
+
+footer .footer__item a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+footer .footer__item__icon {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-size: 80%;
+}
+
+footer .footer__item:nth-child(1) {
+  padding-left: 35px;
+}
+
+footer .footer__item:nth-child(2) {
+  padding-left: 35px;
+}
+
 main {
   width: 100%;
   max-width: 768px;
   margin: auto;
+  padding: auto;
 }
 
 .localisation {
