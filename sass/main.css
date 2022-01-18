@@ -205,8 +205,12 @@ main {
 }
 
 .plat {
-  background-color: white;
+  height: 70px;
   width: 100%;
+  background-color: white;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.14);
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.14);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -216,11 +220,27 @@ main {
 }
 
 .plat__text {
-  border: 1px dotted blue;
+  height: 100%;
+  min-width: 65%;
+  text-overflow: ellipsis;
+}
+
+.plat__text h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  margin: 0;
+  padding: 10px 0px 0px 10px;
+}
+
+.plat__text p {
+  font-weight: 200;
+  margin: 0;
+  padding: 5px 0px 0px 10px;
 }
 
 .plat__price {
-  border: 1px dotted red;
+  font-weight: 450;
+  padding: 40px 25px 0px 10px;
 }
 
 header {
