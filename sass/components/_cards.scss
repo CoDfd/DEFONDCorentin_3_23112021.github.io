@@ -124,22 +124,24 @@
     {
         height: 100%;
         min-width: 65%;
-        
-        text-overflow: ellipsis;
 
         & h3
         {
             font-family: 'Roboto', sans-serif;
-            font-weight: 500;
+            font-weight: 450;
             margin: 0;
-            padding: 10px 0px 0px 10px;
+            padding: 10px 0px 5px 10px;
+            
+            overflow: hidden ;
+            text-overflow:  ellipsis;
+            white-space: nowrap;
         }
 
         & p
         {
             font-weight: 200;     
             margin: 0;
-            padding: 5px 0px 0px 10px;  
+            padding: 0px 0px 10px 10px;  
         }
 
     }

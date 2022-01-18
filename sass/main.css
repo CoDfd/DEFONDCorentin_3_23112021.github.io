@@ -37,8 +37,8 @@ main {
   width: 90%;
   background-color: #f6f6f6;
   border-radius: 30px;
-  padding: 40px 0px 40px 0px;
-  margin-left: 5%;
+  padding: 40px 0px 40px 20px;
+  margin-left: 20px;
   text-align: center;
   position: relative;
   -webkit-box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.1), inset 2px 10px 20px rgba(255, 255, 255, 0.5);
@@ -222,20 +222,22 @@ main {
 .plat__text {
   height: 100%;
   min-width: 65%;
-  text-overflow: ellipsis;
 }
 
 .plat__text h3 {
   font-family: 'Roboto', sans-serif;
-  font-weight: 500;
+  font-weight: 450;
   margin: 0;
-  padding: 10px 0px 0px 10px;
+  padding: 10px 0px 5px 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .plat__text p {
   font-weight: 200;
   margin: 0;
-  padding: 5px 0px 0px 10px;
+  padding: 0px 0px 10px 10px;
 }
 
 .plat__price {
@@ -390,7 +392,7 @@ footer .footer__item:nth-child(2) {
 }
 
 .resa {
-  height: 470px;
+  height: 500px;
   min-height: -webkit-fit-content;
   min-height: -moz-fit-content;
   min-height: fit-content;
