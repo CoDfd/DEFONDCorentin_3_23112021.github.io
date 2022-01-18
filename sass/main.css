@@ -109,6 +109,14 @@ main {
   border-radius: 20px;
   -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
           box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
+  -webkit-filter: opacity(100%);
+          filter: opacity(100%);
+  -webkit-transition-property: -webkit-transform filter;
+  transition-property: -webkit-transform filter;
+  transition-property: transform filter;
+  transition-property: transform filter, -webkit-transform filter;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
 }
 
 .card:hover {
