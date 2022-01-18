@@ -84,4 +84,19 @@
         padding: 15px 15px 30px 15px;
     }
 
+    & .order
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        & .resa__button
+        {
+            height: 50px;
+            width: 200px;
+            font-size: 100%;
+        }
+    }
+
 }
