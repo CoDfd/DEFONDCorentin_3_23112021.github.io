@@ -1,16 +1,3 @@
-p
-{
-    font-family: 'Roboto', sans-serif;
-}
-main
-{
-    width: 100%;
-    max-width: 768px;
-    height: 1800px;
-    margin: auto;
-    padding : auto;
-
-}
 .menu-img
 {
     width: 100%;
@@ -21,14 +8,80 @@ main
     {
         width: 100%;
         object-fit:cover;
+        object-position: 0px -10px;
     }
 }
-.menu-container
+.menu
 {
     width: 100%;
-    height: 85%;
+    /* à adapter */
+    height: 1500px;
     background-color: #f6f6f6;
     border-radius: 50px 50px 0% 0%;
     margin-top: -50px;
-    overflow: visible;
+    position: relative;
+    
+    &__title
+    {
+        padding: 10px 20px 0px 20px;
+       
+        display: flex;
+        justify-content: space-between;
+
+        & h1
+        {
+            font-size: 180%;
+            font-weight: 100;
+        }
+
+        &__icon
+        {
+            padding: 30px 30px 0px 0px;
+            font-size: 70%;
+            color: #f6f6f6;
+
+            -webkit-text-stroke: 1px rgba(0,0,0,1);
+
+            & i
+            {
+                transition: all 0.3s linear 0s;
+                &:hover
+                {
+                    color: $color-primary;
+                    -webkit-text-stroke: 1px $color-primary;
+                }
+            }
+        }
+    }
+
+    &__epd
+    {
+        width: 100%;
+        height: auto;
+        padding: 0px 0px 0px 17px;
+
+        & h2
+        {
+            font-family: 'Roboto', sans-serif;
+            font-size: 110%;
+            font-weight: 300;
+            margin: 0px 0px 4px 0px;
+        }
+
+        &__underline
+        {
+            width: 45px;
+            border-top: 3px solid $color-tertiary;
+        }
+    }
+
+    & .container-plats
+    {
+        display: flex;
+        flex-direction: colomn;
+        justify-content: space-around;
+        align-items: center;
+        padding: 15px 15px 30px 15px;
+    }
+
 }
