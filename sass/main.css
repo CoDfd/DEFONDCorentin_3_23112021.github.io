@@ -219,6 +219,8 @@ main {
   border-radius: 20px;
   -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.14);
           box-shadow: 0 3px 10px rgba(0, 0, 0, 0.14);
+  overflow: hidden;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -249,8 +251,53 @@ main {
 }
 
 .plat__price {
+  width: 65px;
   font-weight: 450;
-  padding: 40px 25px 0px 10px;
+  padding: 40px 0px 0px 0px;
+  z-index: 1;
+  background-color: white;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out 0.1s;
+  transition: -webkit-transform 0.3s ease-in-out 0.1s;
+  transition: transform 0.3s ease-in-out 0.1s;
+  transition: transform 0.3s ease-in-out 0.1s, -webkit-transform 0.3s ease-in-out 0.1s;
+}
+
+.plat__select {
+  width: 65px;
+  height: 70px;
+  background-color: #99E2D0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.plat__select i {
+  color: white;
+  -webkit-transform: translateX(50px);
+          transform: translateX(50px);
+  -webkit-transition: -webkit-transform 0.4s ease-in-out 0.2s;
+  transition: -webkit-transform 0.4s ease-in-out 0.2s;
+  transition: transform 0.4s ease-in-out 0.2s;
+  transition: transform 0.4s ease-in-out 0.2s, -webkit-transform 0.4s ease-in-out 0.2s;
+}
+
+.plat:hover .plat__price {
+  -webkit-transform: translateX(-65px);
+          transform: translateX(-65px);
+}
+
+.plat:hover .plat__select i {
+  -webkit-transform: translateX(0) rotate(360deg);
+          transform: translateX(0) rotate(360deg);
 }
 
 header {
@@ -618,7 +665,7 @@ footer .footer__item:nth-child(2) {
 }
 
 .menu__epd {
-  width: 100%;
+  width: auto;
   height: auto;
   padding: 0px 0px 0px 17px;
 }
