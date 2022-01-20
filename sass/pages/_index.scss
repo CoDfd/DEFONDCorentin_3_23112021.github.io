@@ -113,6 +113,12 @@
         align-items: center;
     }
 }
+.anchor
+{
+    width : 100px;
+    height: 0px;
+    margin-top: 40px;
+}
 .resto
 {
     height: 1820px;
@@ -127,7 +133,7 @@
     &__title
     {
         width: 90%;
-        padding-top: 40px;
+        padding:auto;
         
         & h1
         {
