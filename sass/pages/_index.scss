@@ -133,6 +133,39 @@ $radius-coin : 100px;
         }
     }
 }
+@media (min-width: 768px)
+{
+    .resa
+    {
+        height: auto;
+        text-align: left;
+        padding-bottom: 20px;
+
+        &__title
+        {            
+            box-sizing: border-box;
+            width: 100%;
+            padding: 0px 20px 0px 20px;
+
+            & h1
+            {
+                line-height: 40%;
+            }
+        }
+
+        &__body
+        {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 0px 20px 10px 20px;
+
+            & p
+            {
+                line-height: 40%;
+            }
+        }
+    }
+}
 .fonctionnement
 {
     height: 650px;
