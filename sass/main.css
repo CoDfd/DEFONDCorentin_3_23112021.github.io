@@ -232,8 +232,14 @@ main {
 }
 
 .plat__text {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   height: 100%;
-  min-width: 65%;
+  width: calc(100% - 65px);
+  z-index: 0;
+  background-color: white;
+  -webkit-transition: width 0.3s ease-in-out 0.1s;
+  transition: width 0.3s ease-in-out 0.1s;
 }
 
 .plat__text h3 {
@@ -254,10 +260,14 @@ main {
 
 .plat__price {
   width: 65px;
+  height: 70px;
   font-weight: 450;
   padding: 40px 0px 0px 0px;
-  z-index: 1;
+  z-index: 0;
   background-color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
   -webkit-transition: -webkit-transform 0.3s ease-in-out 0.1s;
   transition: -webkit-transform 0.3s ease-in-out 0.1s;
   transition: transform 0.3s ease-in-out 0.1s;
@@ -268,9 +278,6 @@ main {
   width: 65px;
   height: 70px;
   background-color: #99E2D0;
-  position: absolute;
-  top: 0;
-  right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -292,6 +299,10 @@ main {
   transition: transform 0.4s ease-in-out 0.2s, -webkit-transform 0.4s ease-in-out 0.2s;
 }
 
+.plat:hover .plat__text {
+  width: calc(100% - 65px * 2);
+}
+
 .plat:hover .plat__price {
   -webkit-transform: translateX(-65px);
           transform: translateX(-65px);
@@ -304,7 +315,7 @@ main {
 
 header {
   width: 100%;
-  max-width: 768px;
+  max-width: 992px;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -374,7 +385,7 @@ header .logo img {
 
 footer {
   width: 100%;
-  max-width: 768px;
+  max-width: 992px;
   height: 320px;
   margin: auto;
   margin-top: -30px;
@@ -444,6 +455,7 @@ body {
   }
   100% {
     opacity: 0;
+    z-index: -1;
   }
 }
 
@@ -453,6 +465,7 @@ body {
   }
   100% {
     opacity: 0;
+    z-index: -1;
   }
 }
 

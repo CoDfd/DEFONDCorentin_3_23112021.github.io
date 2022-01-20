@@ -112,9 +112,11 @@
 
 }
 
+$width-select : 65px;
+$height-plat : 70px;
 .plat
 {
-    height: 70px;
+    height: $height-plat;
     width: 100%;
 
     background-color: white;
@@ -130,8 +132,13 @@
 
     &__text
     {
+        box-sizing: border-box;
         height: 100%;
-        min-width: 65%;
+        width: calc(100% - #{$width-select});
+        z-index: 0;
+        background-color: white;
+
+        transition: width 0.3s ease-in-out 0.1s;
 
         & h3
         {
@@ -156,23 +163,24 @@
 
     &__price
     {   
-        width: 65px;
+        width: $width-select;
+        height: $height-plat;
         font-weight: 450;
         padding: 40px 0px 0px 0px;
-        z-index: 1;
+        z-index: 0;
         background-color: white;
+
+        position : absolute;
+        top: 0; right: 0;
 
         transition: transform 0.3s ease-in-out 0.1s;
     }
 
     &__select
     {
-        width: 65px;
-        height: 70px;
+        width: $width-select;
+        height: $height-plat;
         background-color: $color-tertiary;
-
-        position : absolute;
-        top: 0; right: 0;
 
         display: flex;
         justify-content: center;    
@@ -187,9 +195,14 @@
 
     }
 
+    &:hover .plat__text
+    {
+        width: calc(100% - #{$width-select} * 2);
+    }
+
     &:hover .plat__price
     {
-        transform :translateX(-65px);
+        transform :translateX(-$width-select);
     }
 
     &:hover .plat__select i
