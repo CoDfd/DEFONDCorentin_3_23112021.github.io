@@ -6,9 +6,9 @@
     background-color: white;
     border-radius: 20px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.16);
-    filter: opacity(100%);
+    opacity : 1 ;
 
-    transition-property: transform filter;
+    transition-property: transform , opacity;
     transition-duration: 0.2s;
 
     &:hover
@@ -19,7 +19,7 @@
 
     &:active
     {
-        filter: opacity(20%);
+        opacity: 0.2;
         transform: scale(1.04);
     }
 
