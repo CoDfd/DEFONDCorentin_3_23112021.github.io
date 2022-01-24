@@ -195,6 +195,64 @@
     }
 }
 
+@media (max-width : 375px)
+{
+    .card
+    {
+        &__body
+        {
+            &__text
+            {
+                width: calc(100% - 30px);
+                font-size: 150%;
+                box-sizing: border-box;
+                padding-left: 20px;
+                padding-top: 20px;
+                line-height: 140%;
+
+                & h2
+                {
+                    font-size: 110%;
+                    margin : 0px;
+
+                    overflow: hidden ;
+                    text-overflow:  ellipsis;
+                    white-space: nowrap;
+                }
+
+                & p 
+                {
+                    margin : 0px;
+
+                    overflow: hidden ;
+                    text-overflow:  ellipsis;
+                    white-space: nowrap;
+                }
+
+            }
+
+            &__icon
+            {
+                height: 100%;
+                width: 30px;
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+
+                display: flex;
+                align-items: center;
+
+                & i
+                {
+                    font-size: 130%;
+                }
+            }
+        }
+
+    }
+
+}
+
 .plat
 {
     height: $height-plat;

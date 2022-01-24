@@ -141,7 +141,7 @@ main {
   width: 90%;
   background-color: #f6f6f6;
   border-radius: 30px;
-  padding: 40px 0px 40px 20px;
+  padding: 40px 0px 40px 40px;
   margin-left: 20px;
   text-align: center;
   cursor: pointer;
@@ -227,6 +227,12 @@ main {
     position: absolute;
     top: 13px;
     left: 8%;
+  }
+}
+
+@media (max-width: 375px) {
+  .step {
+    font-size: 80%;
   }
 }
 
@@ -368,6 +374,48 @@ main {
             box-sizing: border-box;
     padding-left: 10px;
     padding-top: 10px;
+    line-height: 140%;
+  }
+  .card__body__text h2 {
+    font-size: 110%;
+    margin: 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .card__body__text p {
+    margin: 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .card__body__icon {
+    height: 100%;
+    width: 30px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .card__body__icon i {
+    font-size: 130%;
+  }
+}
+
+@media (max-width: 375px) {
+  .card__body__text {
+    width: calc(100% - 30px);
+    font-size: 150%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-left: 20px;
+    padding-top: 20px;
     line-height: 140%;
   }
   .card__body__text h2 {
@@ -847,6 +895,13 @@ body {
   }
 }
 
+@media (max-width: 375px) {
+  .resa__button {
+    width: 250px;
+    font-size: 130%;
+  }
+}
+
 .fonctionnement {
   height: 650px;
   width: 100%;
@@ -1033,7 +1088,7 @@ body {
 }*/
 .menu-img {
   width: 100%;
-  height: 300px;
+  max-height: 300px;
   overflow: hidden;
   margin: 0;
   padding: 0;

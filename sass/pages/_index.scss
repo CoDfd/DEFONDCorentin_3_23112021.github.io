@@ -168,6 +168,17 @@ body
         }        
     }
 }
+@media (max-width : 375px)
+{
+    .resa
+    {
+        &__button
+        {
+            width: 250px;
+            font-size: 130%;
+        }        
+    }
+}
 
 .fonctionnement
 {
