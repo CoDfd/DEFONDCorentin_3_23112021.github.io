@@ -1,27 +1,57 @@
 body{
     margin : 0;
 }
+
+/*@media (min-width: 768px)
+{
+    main
+    {
+        position: relative;
+    }
+}*/
+
 .menu-img
 {
     width: 100%;
     height: 300px;
     overflow: hidden;
+    margin: 0;
+    padding: 0;
 
     & img
     {
         width: 100%;
+        margin: 0;
+        padding: 0;
         object-fit:cover;
         object-position: 0px -10px;
     }
 }
-.menu
+@media (min-width: 768px)
+{
+    .menu-img
+    {
+        height: 100%;
+        position : relative;
+        z-index: -1;
+
+        & img
+        {
+            object-position: 0px;
+        }
+    }
+}
+
+.menuresto
 {
     width: 100%;
-    /* à adapter */
-    height: 1500px;
+    height: auto;
     background-color: #f6f6f6;
     border-radius: 50px 50px 0% 0%;
+    box-sizing: border-box;
     margin-top: -50px;
+    margin-bottom: 30px;
+    padding-bottom: 50px;
     position: relative;
     
     &__title
@@ -58,49 +88,174 @@ body{
         }
     }
 
-    &__epd
+    & .menu
     {
-        width: auto;
-        height: auto;
-        padding: 0px 0px 0px 17px;
+        margin : 0;
+        padding : 0;
+        height : auto;
+        width : auto;
 
-        & h2
+        &__epd
         {
-            font-family: 'Roboto', sans-serif;
-            font-size: 110%;
-            font-weight: 300;
-            margin: 0px 0px 4px 0px;
-        }
+            margin : 0;
+            padding:0;
+            height: auto;
+            width:auto;
+            
+            &__head
+            {
+                width: auto;
+                height: auto;
+                padding: 0px 0px 0px 17px;
+                
+                opacity: 0;
 
-        &__underline
-        {
-            width: 45px;
-            border-top: 3px solid $color-tertiary;
-        }
-    }
+                animation: animepd ;
+                animation-duration: $anim-duration-edp ;
+                animation-timing-function : linear;
+                animation-fill-mode: forwards;
 
-    & .container-plats
-    {
-        display: flex;
-        flex-direction: colomn;
-        justify-content: space-around;
-        align-items: center;
-        padding: 15px 15px 30px 15px;
+                & h2
+                {
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 110%;
+                    font-weight: 300;
+                    margin: 0px 0px 4px 0px;
+                }
+
+                &__underline
+                {
+                    width: 45px;
+                    border-top: 3px solid $color-tertiary;
+                }
+            }
+
+            & .container-plats
+            {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                gap: 20px;
+                padding: 15px 15px 40px 15px;
+            }
+        }
     }
 
     & .order
-    {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        & .resa__button
         {
-            height: 50px;
-            width: 200px;
-            font-size: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            & .resa__button
+            {
+                height: 50px;
+                width: 200px;
+                font-size: 100%;
+            }
+        }
+}
+
+@media (max-width : 767px)
+{
+    @for $k from 1 through 3
+    {
+        .menu .menu__epd:nth-child(#{$k}) .menu__epd__head
+        {
+            animation-delay: ($k - 1) * ($anim-duration-edp);
+        }
+
+        @for $i from 1 through 4
+        {
+            .menu .menu__epd:nth-child(#{$k}) .container-plats .plat:nth-child(#{$i})
+            {
+                animation-delay: ($k - 1) * ($anim-duration-edp) + $anim-delay-plat * ($i - 1);
+            }
         }
     }
-
 }
+
+@media (min-width : 768px)
+{
+    .menuresto
+    {
+        background-color: rgba(246,246,246,0.7);
+        border-radius: 30px 30px 0% 0%;
+        margin-top: -515px;
+        margin-bottom: 0;
+        padding-bottom: 15px;
+        z-index: 0;
+
+        &__title
+        {
+            padding: 10px 20px 10px 20px;
+
+            & h1
+            {
+                font-size: 160%;
+                margin : 0;
+            }
+
+            &__icon
+            {
+                padding: 10px 10px 0px 0px;
+                font-size: 80%;
+                color: rgba(246,246,246,0.7);
+            }
+        }
+
+        & .menu
+        {
+            display: flex;
+            justify-content: space-around;
+
+
+            &__epd
+            {
+                width : 33%;
+
+                &__head
+                {
+                    & h2
+                    {
+                        font-size: 100%;
+                        font-weight: 400;
+                        margin: 0px 0px 2px 0px;
+                    }
+
+                    &__underline
+                    {
+                        width: 40px;
+                        border-top: 2px solid lighten(black,30%);
+                    }
+                }
+
+                & .container-plats
+                {
+                    padding: 10px 10px 15px 10px;
+                }
+            }
+        }
+
+        & .order
+        {
+            & .resa__button
+            {
+                background-color: lighten($color-primary,5%);
+            }
+        }
+    }
+    
+    @for $i from 1 through 4
+        {
+            .menu .menu__epd .container-plats .plat:nth-child(#{$i})
+            {
+                animation-delay : $anim-delay-plat * ($i - 1);
+            }
+        }
+}
+
+
+

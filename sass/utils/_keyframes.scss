@@ -1,0 +1,55 @@
+@keyframes loader {
+    0%
+    {
+        opacity : 1;
+    }
+100%
+    {
+        opacity: 0;
+        z-index: -1;
+    }   
+}
+
+@keyframes spin {
+    0%, 100% {
+      animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+    }
+    0% {
+      transform: rotateY(0deg);
+    }
+    50% {
+      transform: rotateY(1800deg);
+      animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+    }
+    100% {
+      transform: rotateY(3600deg);
+    }
+}
+
+@keyframes animplat {
+    0%
+    {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+
+    100%
+    {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes animepd {
+
+    0%
+    {
+        opacity: 0;
+    }
+
+    100%
+    {
+        opacity : 1;
+    }
+    
+}

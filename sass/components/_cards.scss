@@ -146,7 +146,9 @@
         {
             &__text
             {
+                width: calc(100% - 30px);
                 font-size: 100%;
+                box-sizing: border-box;
                 padding-left: 10px;
                 padding-top: 10px;
                 line-height: 140%;
@@ -155,18 +157,33 @@
                 {
                     font-size: 110%;
                     margin : 0px;
+
+                    overflow: hidden ;
+                    text-overflow:  ellipsis;
+                    white-space: nowrap;
                 }
 
                 & p 
                 {
                     margin : 0px;
+
+                    overflow: hidden ;
+                    text-overflow:  ellipsis;
+                    white-space: nowrap;
                 }
 
             }
 
             &__icon
             {
-                padding: 20px 10px 0px 0px;
+                height: 100%;
+                width: 30px;
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+
+                display: flex;
+                align-items: center;
 
                 & i
                 {
@@ -178,8 +195,6 @@
     }
 }
 
-$width-select : 65px;
-$height-plat : 70px;
 .plat
 {
     height: $height-plat;
@@ -195,6 +210,12 @@ $height-plat : 70px;
 
     display: flex;
     justify-content: space-between;
+
+    opacity: 0;
+    transform: translateY(50%);
+
+    animation: animplat #{$anim-duration-plat} ;
+    animation-fill-mode: forwards;
 
     &__text
     {
@@ -220,9 +241,13 @@ $height-plat : 70px;
 
         & p
         {
-            font-weight: 200;     
+            font-weight: 300;     
             margin: 0;
-            padding: 0px 0px 10px 10px;  
+            padding: 0px 0px 10px 10px;    
+                      
+            overflow: hidden ;
+            text-overflow:  ellipsis;
+            white-space: nowrap;
         }
 
     }
@@ -274,5 +299,18 @@ $height-plat : 70px;
     &:hover .plat__select i
     {
         transform :translateX(0)  rotate(360deg);
+    }
+}
+@media (min-width: 768px)
+{
+    .plat
+    {
+        font-size: 90%;
+
+        &__price
+        {
+            box-sizing: border-box;
+            padding: 40px 0px 0px 20px;   
+        }
     }
 }

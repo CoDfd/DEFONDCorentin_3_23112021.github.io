@@ -55,3 +55,34 @@ footer
         
     }
 }
+
+@media (min-width: 768px)
+{
+    footer
+    {
+        height: 200px;
+        margin-top: 0px;
+        z-index: 2;
+
+        & h2
+        {
+            font-size : 160%;
+            padding: 20px 0px 10px 30px;
+            margin: 0px;
+        }
+
+        & .footer
+        {
+            font-size: 100%;
+            line-height: 160%;
+
+            &__item
+            {
+                &:nth-child(1) , &:nth-child(2)
+                {
+                    padding-left: 25px;
+                }
+            }
+        }
+    }
+}

@@ -1,3 +1,14 @@
 $color-primary : #9356DC ;
 $color-secondary : #FF79DA ;
 $color-tertiary : #99E2D0 ;
+
+
+$radius-coin : 100px;
+
+$width-select : 65px;
+$width-select-desktop : 55px;
+
+$height-plat : 70px;
+$anim-delay-plat : 0.2s;
+$anim-duration-plat : 1s;
+$anim-duration-edp : $anim-duration-plat - (2 * $anim-delay-plat) 
